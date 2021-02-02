@@ -9,9 +9,9 @@ import kotlinx.android.synthetic.main.activity_videoplayer.*
 import java.util.*
 
 
-class VidepPlayerActivity: AppCompatActivity() {
-    var media:String=""
-    var mediaType:String=""
+class VidepPlayerActivity : AppCompatActivity() {
+    var media: String = ""
+    var mediaType: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_videoplayer)
@@ -19,15 +19,15 @@ class VidepPlayerActivity: AppCompatActivity() {
     }
 
     private fun initView() {
-        media=intent.getStringExtra("media")!!
-       textMediaType.text="Media Type:"+intent.getStringExtra("mediaType")!!
-       val player = SimpleExoPlayer.Builder(this).build()
-       PlayerViewSData.setPlayer(player)
+        media = intent.getStringExtra("media")!!
+        textMediaType.text = "Media Type:" + intent.getStringExtra("mediaType")!!
+        val player = SimpleExoPlayer.Builder(this).build()
+        PlayerViewSData.setPlayer(player)
         // Build the media items.
         val rnd = Random()
         val color: Int = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
         clBackground.setBackgroundColor(color)
-   val firstItem: MediaItem = MediaItem.fromUri(media)
+        val firstItem: MediaItem = MediaItem.fromUri(media)
         player.apply {
             addMediaItem(firstItem)
             prepare()

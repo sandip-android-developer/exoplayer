@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MediaSupportingApplication</string>
+    <string name="title_activity_bottom_sheet">MainActivity</string>
+    <string name="title_image">Image</string>
+    <string name="title_multimedia">Multimedia</string>
+    <string name="title_file">File</string>
 </resources>
